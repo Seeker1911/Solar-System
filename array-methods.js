@@ -34,13 +34,10 @@ var words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the"
     "mouse", "gets", "the", "cheese"
 ];
 
-words.reduce(function (previousValue, currentValue, index, array) {
+var newWords = words.reduce(function (previousValue, currentValue, index, array) {
 	 /* body... */ 
-	 return  index 
+	 return  previousValue + " " + currentValue;
 })
-
-// integers = integers
-// .sort(function (a,b) {return b-a})
-// .splice(0, 4).map(function (num){return num *1.5 -1})
-// .reduce(function (previousValue, currentValue, index, array){return previousValue + currentValue});
-// console.log("Single line answer: ", integers);
+console.log("words", newWords);
+var newSentence = document.getElementById("newSentence");
+newSentence.innerHTML += newWords;
